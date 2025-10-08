@@ -22,3 +22,12 @@
 >> Active not working specifically on Webkit
 > Had trouble with CSS cros platform 'active' psuedo-class, b/c of Webkit vs Blink &,
 >> How 'active' translates on mobile
+
+# 10/8/25
+
+* Connect UI to JSON file w fs read & for loop, autolayout:
+> 
+```
+`${./titles.json[0]}`
+```
+* What's with flickering on load?

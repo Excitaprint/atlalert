@@ -59,7 +59,7 @@
         margin: auto;
         overflow: hidden;
         overflow-wrap: break-word;
-        display: inline;
+        /* display: inline; */
         text-align: left;
         transition: 100ms;
         line-height: 1;
@@ -75,7 +75,7 @@
         /* box-shadow: 0 4px 8px rgba(99, 99, 99, 0.25); */
         margin: auto;
         overflow: hidden;
-        display: inline;
+        /* display: inline; */
         text-align: left;
         /* transition: 100ms, box-shadow 100ms; */
         transition: 100ms, background-color 100ms, -webkit-tap-highlight-color 100ms;
@@ -117,15 +117,15 @@
 
     });
         const clickColorDown = document.querySelectorAll('.post');
-        clickColorDown.addEventListener('mousedown', function() {
-        clickColorDown.forEach(color => { 
-        color.style.backgroundColor = 'rgb(195, 214, 243';
+        clickColorDown.forEach(post => { 
+        post.addEventListener('mousedown', function() {
+        post.style.backgroundColor = 'rgb(195, 214, 243';
         });
         });
         const clickColorUp = document.querySelectorAll('.post');
-        clickColorUp.addEventListener('mouseup', function() {
-        clickColorUp.forEach(color => {     
-            color.style.backgroundColor = 'rgb(253, 253, 253)';
+        clickColorUp.forEach(post => {   
+        post.addEventListener('mouseup', function() {
+        post.style.backgroundColor = 'rgb(253, 253, 253)';
         });
         });    
 

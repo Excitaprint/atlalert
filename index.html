@@ -30,16 +30,18 @@
     .grid-container {
         display: grid;
         grid-template-columns: repeat(autofill,
-        minmax(72px, 1fr));
+        minmax(90px, 1fr));
         gap: 6px;
     }
     h1 {
         font-size: 16px;
         font-weight: 700;
+        line-height: normal;
     }
     p {
         font-size: 12px;
         overflow-wrap: anywhere;
+        text-overflow: ellipsis;
     }
     .post {
         width: inherit;
@@ -47,7 +49,7 @@
         background-color: rgb(253, 253, 253);
         border-radius: 16px;
         border: .25px solid rgba(88, 88, 88, 0.88);
-        height: 72px;
+        height: 90px;
         /* box-shadow: 0 4px 8px rgba(99, 99, 99, 0.25); */
         margin: auto;
         overflow: hidden;
@@ -55,6 +57,7 @@
         display: inline;
         text-align: left;
         transition: 100ms;
+        line-height: 1;
     }
         .post:focus, .post:active {
         -webkit-tap-highlight-color: transparent;
@@ -63,7 +66,7 @@
         /* box-shadow: 12px 12px 12px 12px rgba(159, 214, 214); */
         border-radius: 16px;
         border: .25px solid rgba(88, 88, 88, 0.88);
-        height: 72px;
+        height: 90px;
         /* box-shadow: 0 4px 8px rgba(99, 99, 99, 0.25); */
         margin: auto;
         overflow: hidden;
@@ -94,15 +97,15 @@
             let linkText = title.split('https://')[1];
             let card = document.createElement('div');
             card.classList.add('post');
-            card.innerHTML = `<h1>${titleText}</h1><p><a href="https://${linkText}">${linkText}</a></p>`;
+            card.innerHTML = `<h1>${titleText}</h1><p><a href="https://${linkText}">${linkText.replace(/^www\./, "")}</a></p>`;
             container.appendChild(card);
             // return card;
         });
         const expand = document.querySelectorAll('.post');
             expand.forEach(post => {
             post.addEventListener('click', function() {
-            expand.forEach(post => post.style.height = '72px'); // sets all cards to 72px before exanding selected card
-            this.style.height = this.style.height === '216px' ? '72px' : '216px';
+            expand.forEach(post => post.style.height = '90px'); // sets all cards to 90px before exanding selected card
+            this.style.height = this.style.height === '216px' ? '90px' : '216px';
             console.log('clicked' + this);
         // Code to handle onClick background color change and off when click released
         });    

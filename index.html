@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
 <style>
     body {
-        margin: 0;
+        margin: 0 auto;
         padding: 12px;
         background-color: #d3d3d3;
         font-family: "JetBrains Mono", monospace;
@@ -32,6 +32,7 @@
         font-size: 12px;
     }
     .post {
+        width: inherit;
         padding: 10px;
         background-color: rgb(253, 253, 253);
         border-radius: 16px;
@@ -40,6 +41,7 @@
         /* box-shadow: 0 4px 8px rgba(99, 99, 99, 0.25); */
         margin: auto;
         overflow: hidden;
+        overflow-wrap: break-word;
         display: inline;
         text-align: left;
         transition: 100ms;
@@ -63,137 +65,32 @@
 </style>
 </head>
 <body>
-    <div class="grid-container">
+    <!-- <div class="grid-container">
         <div tabindex="1" class="post">
             <h1>Sed ut Perspiciatis</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </div> 
-        <div tabindex="1" class="post">
-            <h1>Sed ut Perspiciatis</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </div> 
-        <div tabindex="1" class="post">
-            <h1>Sed ut Perspiciatis</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </div> 
-        <div tabindex="1" class="post">
-            <h1>Sed ut Perspiciatis</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </div> 
-        <div tabindex="1" class="post">
-            <h1>Sed ut Perspiciatis</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </div>
-        <div tabindex="1" class="post">
-            <h1>Sed ut Perspiciatis</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </div> 
-        <div tabindex="1" class="post">
-            <h1>Sed ut Perspiciatis</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </div> 
-        <div tabindex="1" class="post">
-            <h1>Sed ut Perspiciatis</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </div> 
-        <div tabindex="1" class="post">
-            <h1>Sed ut Perspiciatis</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </div> 
-        <div tabindex="1" class="post">
-            <h1>Sed ut Perspiciatis</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </div>
-                <div class="post">
-            <h1>Sed ut Perspiciatis</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </div>
-        <div tabindex="1" class="post">
-            <h1>Sed ut Perspiciatis</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </div> 
-        <div tabindex="1" class="post">
-            <h1>Sed ut Perspiciatis</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </div> 
-        <div tabindex="1" class="post">
-            <h1>Sed ut Perspiciatis</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </div> 
-        <div tabindex="1" class="post">
-            <h1>Sed ut Perspiciatis</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </div> 
-        <div tabindex="1" class="post">
-            <h1>Sed ut Perspiciatis</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </div>
-            <div tabindex="1" class="grid-container">
-        <div class="post">
-            <h1>Sed ut Perspiciatis</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </div> 
-        <div tabindex="1" class="post">
-            <h1>Sed ut Perspiciatis</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </div> 
-        <div tabindex="1" class="post">
-            <h1>Sed ut Perspiciatis</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </div> 
-        <div tabindex="1" class="post">
-            <h1>Sed ut Perspiciatis</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </div> 
-        <div tabindex="1" class="post">
-            <h1>Sed ut Perspiciatis</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </div>
-        <div tabindex="1" class="post">
-            <h1>Sed ut Perspiciatis</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </div> 
-        <div tabindex="1" class="post">
-            <h1>Sed ut Perspiciatis</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </div> 
-        <div tabindex="1" class="post">
-            <h1>Sed ut Perspiciatis</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </div> 
-        <div tabindex="1" class="post">
-            <h1>Sed ut Perspiciatis</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </div> 
-        <div tabindex="1" class="post">
-            <h1>Sed ut Perspiciatis</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </div>
-                <div class="post">
-            <h1>Sed ut Perspiciatis</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </div>
-        <div tabindex="1" class="post">
-            <h1>Sed ut Perspiciatis</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </div> 
-        <div tabindex="1" class="post">
-            <h1>Sed ut Perspiciatis</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </div> 
-        <div class="post">
-            <h1>Sed ut Perspiciatis</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </div> 
-        <div tabindex="1" class="post">
-            <h1>Sed ut Perspiciatis</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </div> 
-        <div tabindex="1" class="post">
-            <h1>Sed ut Perspiciatis</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </div> 
+    </div>  -->
 <script>
+
+    const container = document.createElement('div');
+    container.classList.add('grid-container');
+    document.body.appendChild(container);
+
+    fetch('titles.json')
+    .then ( res => res.json())
+    .then ( title => { 
+        title.forEach((title) => {
+            let titleText = title.split('https://')[0];
+            let card = document.createElement('div');
+            card.classList.add('post');
+            card.innerHTML = `<h1>${titleText}</h1>`;
+            container.appendChild(card);
+            // return card;
+        });    
+    });
+
+    // Code to handle onClick background color change and off when click released
+
     const cards = document.querySelectorAll('.post');
     cards.forEach(card => {
         card.addEventListener('click', function() {

@@ -113,13 +113,23 @@
             this.style.height = this.style.height === '216px' ? '90px' : '216px';
             console.log('clicked' + this);
         // Code to handle onClick background color change and off when click released
-        });    
-    });
-
-    
-
+        });
 
     });
+        const clickColorDown = document.querySelectorAll('.post');
+        clickColorDown.addEventListener('mousedown', function() {
+        clickColorDown.forEach(color => { 
+        color.style.backgroundColor = 'rgb(195, 214, 243';
+        });
+        });
+        const clickColorUp = document.querySelectorAll('.post');
+        clickColorUp.addEventListener('mouseup', function() {
+        clickColorUp.forEach(color => {     
+            color.style.backgroundColor = 'rgb(253, 253, 253)';
+        });
+    });    
+
+});
 </script> 
 </body>
 </html>

@@ -94,11 +94,11 @@
             expand.forEach(post => {
             post.addEventListener('click', function() {
             expand.forEach(post => post.style.height = '90px'); // sets all cards to 90px before exanding selected card
-            this.style.height = this.style.height === '216px' ? '90px' : '216px';
+            setTimeout(() => { 
+            this.style.height = this.style.height ===  '216px' ? '90px' : '216px'},0);
             console.log('clicked' + this);
         // Code to handle onClick background color change and off when click released
         });
-
     });
         const clickColorDown = document.querySelectorAll('.post');
         clickColorDown.forEach(post => { 
@@ -111,7 +111,7 @@
         post.addEventListener('mouseup', function() {
         post.style.backgroundColor = 'rgb(253, 253, 253)';
         });
-        });    
+    });    
 
 });
 </script> 

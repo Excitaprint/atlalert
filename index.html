@@ -8,13 +8,21 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
 <style>
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+    a:hover {
+        color: inherit;
+        text-decoration: none;
+    }
     body {
         margin: 0 auto;
         padding: 12px;
         background-color: #d3d3d3;
         font-family: "JetBrains Mono", monospace;
         font-optical-sizing: auto;
-        display: flex-grid;
+        display: grid;
         align-items: center;
         justify-content: center;
     }
@@ -81,22 +89,26 @@
     .then ( title => { 
         title.forEach((title) => {
             let titleText = title.split('https://')[0];
+            let linkText = title.split('https://')[1];
             let card = document.createElement('div');
             card.classList.add('post');
-            card.innerHTML = `<h1>${titleText}</h1>`;
+            card.innerHTML = `<h1>${titleText}</h1><p><a href="https://${linkText}">${linkText}</a></p>`;
             container.appendChild(card);
             // return card;
+        });
+        const expand = document.querySelectorAll('.post');
+            expand.forEach(post => {
+            post.addEventListener('click', function() {
+            expand.forEach(post => post.style.height = '72px'); // sets all cards to 72px before exanding selected card
+            this.style.height = this.style.height === '216px' ? '72px' : '216px';
+            console.log('clicked' + this);
+        // Code to handle onClick background color change and off when click released
         });    
     });
 
-    // Code to handle onClick background color change and off when click released
+    
 
-    const cards = document.querySelectorAll('post');
-    cards.forEach(card => {
-        card.addEventListener('click', function() {
-            cards.forEach(card => card.style.height = '72px'); // sets all cards to 72px before exanding selected card
-            this.style.height = this.style.height === '216px' ? '72px' : '216px';
-        });
+
     });
 </script> 
 </body>

@@ -31,3 +31,7 @@
 `${./titles.json[0]}`
 ```
 * What's with flickering on load?
+
+# 10/10/25
+
+* Fetch in JS https://developer.mozilla.org/en-US/docs/Web/API/Response/json

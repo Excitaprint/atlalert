@@ -105,11 +105,17 @@
         post.addEventListener('mousedown', function() {
         post.style.backgroundColor = 'rgb(195, 214, 243)';
         });
+        post.addEventListener('touchstart', function() {
+        post.style.backgroundColor = 'rgb(195, 214, 243)';
+        });
         });
         const clickColorUp = document.querySelectorAll('.post');
         clickColorUp.forEach(post => {   
         post.addEventListener('mouseup', function() {
         post.style.backgroundColor = 'rgb(253, 253, 253)';
+        post.addEventListener('touchend', function() {
+        post.style.backgroundColor = 'rgb(253, 253, 253)';
+        });
         });
     });    
 

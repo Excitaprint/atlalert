@@ -1,0 +1,20 @@
+{
+  "short_name": "ATL",
+  "name": "ATL Alert",
+  "icons": [
+    // {
+    //   "src": "/favicon-192x192.png",
+    //   "sizes": "192x192",
+    //   "type": "image/png"
+    // },
+    {
+      "src": "/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/index.html",
+  "display": "standalone",
+  "theme_color": "#d3d3d3;",
+  "background_color": "#d3d3d3"
+}

@@ -37,3 +37,9 @@
 * Fetch in JS https://developer.mozilla.org/en-US/docs/Web/API/Response/json
 * Touchstart & touchend events in JS https://developer.mozilla.org/en-US/docs/Web/API/Element/touchstart_event
 * Add: post.style.transition = 'background-color 100ms ease';
+
+# 10/13/25
+
+* Try auto-fill & auto-fit for cards to stretch across screen or not?
+
+* 

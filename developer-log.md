@@ -42,4 +42,4 @@
 
 * Try auto-fill & auto-fit for cards to stretch across screen or not?
 
-* 
+* If card expanded, use .post not .post.fade-in to keep bg white on touchstart/click

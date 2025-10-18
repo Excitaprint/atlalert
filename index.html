@@ -138,7 +138,8 @@
             post.addEventListener('click', function() {
             expand.forEach(post => post.style.height = '90px'); // sets all cards to 90px before exanding selected card
             setTimeout(() => { 
-            this.style.height = this.style.height ===  '216px' ? '90px' : '216px'},0);
+            // this.style.height = this.style.height ===  '216px' ? '90px' : '216px'},0);
+            this.style.height = this.style.height ===  'fit-content' ? '90px' : 'fit-content'},0);
             console.log('clicked' + this);
         // Code to handle onClick background color change and off when click released
         });

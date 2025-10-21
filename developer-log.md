@@ -41,9 +41,10 @@
 # 10/13/25
 
 * Try auto-fill & auto-fit for cards to stretch across screen or not?
-
 * If card expanded, use .post not .post.fade-in to keep bg white on touchstart/click
 
 # 10/18/25
 
 * Try this this.style.height = 'fit-content' ? '90px' : 'fit-content';
+* Back in other repo, fixing scraping logic  to add bodies; finish that then back here
+* Once you fix scraping, rewrite main repo yaml to push to atlalert repo to fetch new json each time

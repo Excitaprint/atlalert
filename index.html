@@ -61,6 +61,7 @@
         font-size: 12px;
         overflow-wrap: anywhere;
         text-overflow: ellipsis;
+        line-height: 1.35;
     }
     .post {
         width: inherit;
@@ -72,6 +73,7 @@
         /* box-shadow: 0 4px 8px rgba(99, 99, 99, 0.25); */
         margin: auto;
         overflow: hidden;
+        /* white-space: nowrap; */
         overflow-wrap: break-word;
         /* display: inline; */
         text-align: left;
@@ -130,12 +132,13 @@
     fetch('titles.json')
     .then ( res => res.json())
     .then ( title => { 
-        title.forEach((title) => {
-            let titleText = title.split('https://')[0];
-            let linkText = title.split('https://')[1];
+        title.forEach(item => {
+            let titleText = String(item.titles);
+            let bodyText = String(item.bodies);
+            bodyText = bodyText.replace(/\n/g, '<br>');
             let card = document.createElement('div');
             card.classList.add('post');
-            card.innerHTML = `<h1>${titleText}</h1><p><a href="https://${linkText}">${linkText.replace(/^www\./, "")}</a></p>`;
+            card.innerHTML = `<h1>${titleText}</h1><p>${bodyText}</p>`;
             container.appendChild(card);
             // return card;
         });
@@ -144,8 +147,8 @@
             post.addEventListener('click', function() {
             expand.forEach(post => post.style.height = '90px'); // sets all cards to 90px before exanding selected card
             setTimeout(() => { 
-            this.style.height = this.style.height ===  '216px' ? '90px' : '216px'},0);
-            // this.style.height = this.style.height ===  'fit-content' ? '90px' : 'fit-content'},0);
+            // this.style.height = this.style.height ===  '216px' ? '90px' : '216px'},0);
+            this.style.height = this.style.height ===  'fit-content' ? '90px' : 'fit-content'},0);
             console.log('clicked' + this);
         // Code to handle onClick background color change and off when click released
         });

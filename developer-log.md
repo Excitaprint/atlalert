@@ -48,3 +48,8 @@
 * Try this this.style.height = 'fit-content' ? '90px' : 'fit-content';
 * Back in other repo, fixing scraping logic  to add bodies; finish that then back here
 * Once you fix scraping, rewrite main repo yaml to push to atlalert repo to fetch new json each time
+
+# 10/26/25
+
+* Script to clean up text in header, call it in body pass it to `template literal` for good typography! Key to app!
+* Fix spacing, see mockup vs prototype PNG

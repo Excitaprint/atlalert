@@ -53,3 +53,11 @@
 
 * Script to clean up text in header, call it in body pass it to `template literal` for good typography! Key to app!
 * Fix spacing, see mockup vs prototype PNG
+
+# 10/27/25
+
+* Typography script in header:
+> Remove underlines
+> Remove "Preliminary information" in headlines if body starts w that
+> Split header at first colon: put rest on line beneath & drop line height?
+> Remove Z1_3 or any police codes in header: it starts w ceratin number

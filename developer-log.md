@@ -61,3 +61,23 @@
 > Remove "Preliminary information" in headlines if body starts w that
 > Split header at first colon: put rest on line beneath & drop line height?
 > Remove Z1_3 or any police codes in header: it starts w ceratin number
+> Capitalization for first letter in each word except (conjunctions, etc)
+
+# 10/29/25
+
+* Fix paragraph spacing. Skips ppg but no spacing in between looks like run on ppg.
+> Ceck and see if website has correct spacing 
+> Scrape as HTML to fix, or write fix into Typography script (10/27/25 dev notes) 
+* For example:
+> Person Shot: Cleveland Avenue SW & I-75 Northbound Expressway SW 
+>> Has space on site, but not on scraped data
+> Officer Involved Shooting (OIS): 41 Irby Avenue NE
+>> Has bold and italics, also has spaces, but scraped data doesn't. 
+* Looks like I need to scrape HTML of page, like bold, p tags, etc. 
+> Dev tools to find out how?
+*`At this time, the investigation is ongoing.\n' +
+      ' \n' +
+      'Press Conference: IMG_0148.mov \n' +
+-NOT -
+The responding officer was not injured.\n' +
+      'Please remember that the information released is limited...'`

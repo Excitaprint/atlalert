@@ -37,8 +37,7 @@
         font-optical-sizing: auto;
         display: grid;
         align-items: center;
-        justify-content: center;
-        
+        justify-content: center;      
         /* max-width: fit-content; */
     }
     .grid-container {
@@ -46,25 +45,31 @@
         display: grid;
         grid-template-columns: repeat(autofill,
         minmax(90px, 1fr));
-        gap: 9.5px;
+        gap: 9.5px;        
     }
     h1 a {
         color: inherit;
         text-decoration: none;
+        margin: 0;
     }
     h1 {
         font-size: 15.45px;
         font-weight: 700;
-        line-height: normal;
-        word-spacing: 2px;
+        /* line-height: normal; */
+        word-spacing: -1.875px;
+        margin: 0;
+        padding-bottom: 2px;
+        padding-top: 3px;
     }
     p {
+        padding-top: 6px;
         font-size: 12.5px;
         overflow-wrap: anywhere;
         text-overflow: ellipsis;
         line-height: 1.475;
         letter-spacing: 0.35px;
         word-spacing: -.015px;
+        margin: 0;
     }
     .post {
         width: inherit;

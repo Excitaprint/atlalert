@@ -62,20 +62,20 @@
         padding-top: 4px;
     }
     p {
-        display: -webkit-box;
+        /* display: -webkit-box; */
         padding-top: 10px;
         font-size: 12.5px;
         overflow-wrap: break-word;
         /* white-space: nowrap; */
-        overflow: hidden;
-        text-overflow: ellipsis;
+        /* overflow: hidden;
+        text-overflow: ellipsis; */
         line-height: 1.475;
         letter-spacing: 0.35px;
         word-spacing: -.015px;
         margin: 0;
     }
     .post {
-        width: inherit;
+        width: fit-content;
         padding: 12px;
         background-color: rgb(253, 253, 253);
         border-radius: 16px;
@@ -83,7 +83,7 @@
         height: 90px;
         /* box-shadow: 0 4px 8px rgba(99, 99, 99, 0.25); */
         overflow: hidden;
-        /* white-space: nowrap; */
+        white-space: pre-wrap;
         overflow-wrap: break-word;
         text-overflow: ellipsis;
         text-align: left;
@@ -91,7 +91,7 @@
         transition: 100ms;
     }
         .post.fade-in{
-        width: inherit;
+        width: fit-content;
         padding: 12px;
         background-color: rgb(195, 214, 243);
         border-radius: 16px;
@@ -106,7 +106,7 @@
         line-height: 1;
 }
         .post.fade-out {
-        width: inherit;
+        width: fit-content;
         padding: 12px;
         background-color: rgb(195, 214, 243);
         border-radius: 16px;
@@ -117,7 +117,7 @@
         overflow: hidden;
         overflow-wrap: break-word;
         text-align: left;
-        transition: 150ms ease-out;
+        transition: 100ms ease-out;
         line-height: 1;
 }
 </style>

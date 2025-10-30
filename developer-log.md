@@ -81,3 +81,10 @@
 -NOT -
 The responding officer was not injured.\n' +
       'Please remember that the information released is limited...'`
+
+# 10/30/25
+
+* Ellipsis not working, why not? Wrap in another div? Is post not a wrapper div?
+* Removed height property from post fade in/fade out.
+> It may have been causing funny animations/glitching.
+>> Think about it! Height on click causes expand, but css says fixed height? Wonky!

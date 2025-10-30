@@ -62,9 +62,12 @@
         padding-top: 4px;
     }
     p {
+        display: -webkit-box;
         padding-top: 10px;
         font-size: 12.5px;
-        overflow-wrap: anywhere;
+        overflow-wrap: break-word;
+        /* white-space: nowrap; */
+        overflow: hidden;
         text-overflow: ellipsis;
         line-height: 1.475;
         letter-spacing: 0.35px;
@@ -82,7 +85,7 @@
         overflow: hidden;
         /* white-space: nowrap; */
         overflow-wrap: break-word;
-        /* display: inline; */
+        text-overflow: ellipsis;
         text-align: left;
         line-height: 1;
         transition: 100ms;
@@ -93,12 +96,11 @@
         background-color: rgb(195, 214, 243);
         border-radius: 16px;
         border: .25px solid rgba(88, 88, 88, 0.88);
-        height: 90px;
+        /* height: 90px; */
         /* box-shadow: 0 4px 8px rgba(99, 99, 99, 0.25); */
         margin: auto;
         overflow: hidden;
         overflow-wrap: break-word;
-        /* display: inline; */
         text-align: left;
         transition: 100ms ease-in;
         line-height: 1;
@@ -109,12 +111,11 @@
         background-color: rgb(195, 214, 243);
         border-radius: 16px;
         border: .25px solid rgba(88, 88, 88, 0.88);
-        height: 90px;
+        /* height: 90px; */
         /* box-shadow: 0 4px 8px rgba(99, 99, 99, 0.25); */
         margin: auto;
         overflow: hidden;
         overflow-wrap: break-word;
-        /* display: inline; */
         text-align: left;
         transition: 150ms ease-out;
         line-height: 1;

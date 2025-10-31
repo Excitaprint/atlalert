@@ -1,5 +1,12 @@
 # ATL Crime Bot Standalone App
 
+* Docs:
+> [Page Transitions! SPA/PWA Secret Sauce](https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API)
+> [Software animation speed best practices](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable)
+> [word-spacing/tracking in CSS]() https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing
+> [letter-spacing/kerning in CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/letter-spacing)
+> [Making PWAs installable](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable)
+
 #### 9/26/26
 
 * Try this for "active" on mobile, also works on desktop?

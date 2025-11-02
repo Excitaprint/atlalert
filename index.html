@@ -143,11 +143,22 @@
         title.forEach(item => {
             let titleText = String(item.titles);
             let bodyText = String(item.bodies);
-            bodyText = bodyText.replace(/\n/g, '<br>');
+            // bodyText = bodyText.replace(/\n/g, '<br>'), 
+            bodyText = bodyText
+            .replace(/<div[^>]*data-olk-copy-source=["']MessageBody["'][^>]*>([\s\S]*?)<\/div>/gi, '$1')
+            .replace(/<div[^>]*>/gi, '<p>')
+            .replace(/<\/div>/gi, '</p>')
+            .replace(/<p[^>]*>(\s|&nbsp;)*<\/p>/gi, '')
+            .replace(/<div>*>(\s|&nbsp;)*<\/div>/gi, '')
+            // .replace(/\n/g, '')
+            .trim();
+            
+
             let card = document.createElement('div');
             card.classList.add('post');
             card.innerHTML = `<h1>${titleText}</h1><p>${bodyText}</p>`;
             container.appendChild(card);
+            console.log(bodyText);
             // return card;
         });
         const expand = document.querySelectorAll('.post');

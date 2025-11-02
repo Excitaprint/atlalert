@@ -95,3 +95,13 @@ The responding officer was not injured.\n' +
 * Removed height property from post fade in/fade out.
 > It may have been causing funny animations/glitching.
 >> Think about it! Height on click causes expand, but css says fixed height? Wonky!
+
+# 
+
+* Fix img src showing up like this "/home/showpublishedimage/4544/638971855728270000"
+> Needs the correct prefix added via RegEx
+>> Find it via Inspect Element
+* Still getting strange gaps, paragraph breaks & in-line breaks, in HTML
+> How to fix?
+>> Remove String() constructor on scrape? 
+>> Stringifying before RegEx causing it?

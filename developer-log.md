@@ -96,7 +96,7 @@ The responding officer was not injured.\n' +
 > It may have been causing funny animations/glitching.
 >> Think about it! Height on click causes expand, but css says fixed height? Wonky!
 
-# 
+# 11/2/25
 
 * Fix img src showing up like this "/home/showpublishedimage/4544/638971855728270000"
 > Needs the correct prefix added via RegEx
@@ -105,3 +105,4 @@ The responding officer was not injured.\n' +
 > How to fix?
 >> Remove String() constructor on scrape? 
 >> Stringifying before RegEx causing it?
+>> Remove something in scrape? Scrape inner div only?

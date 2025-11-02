@@ -103,6 +103,10 @@ The responding officer was not injured.\n' +
 >> Find it via Inspect Element
 * Still getting strange gaps, paragraph breaks & in-line breaks, in HTML
 > How to fix?
->> Remove String() constructor on scrape? 
->> Stringifying before RegEx causing it?
->> Remove something in scrape? Scrape inner div only?
+> Some gaps are written in by Moderator. 
+> Can write script to remove extra breaks between paragraphs  
+> Remove String() constructor on scrape?   
+> Stringifying before RegEx causing it?  
+> Remove something in scrape? Scrape inner div only?
+* Example:
+> Person Shot: 367 Edgewood AVE. SE & Person Shot: 448 Boulevard SE have extra line breaks in APP UI 

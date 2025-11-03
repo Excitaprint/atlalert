@@ -110,3 +110,8 @@ The responding officer was not injured.\n' +
 > Remove something in scrape? Scrape inner div only?
 * Example:
 > Person Shot: 367 Edgewood AVE. SE & Person Shot: 448 Boulevard SE have extra line breaks in APP UI 
+
+# 11/3/25
+
+* Use JS to calculate preview clamp for each item:
+> https://codepen.io/vsync/pen/eYbGgGL

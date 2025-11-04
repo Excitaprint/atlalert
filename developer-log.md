@@ -120,3 +120,26 @@ The responding officer was not injured.\n' +
 
 * Animation touch end thing
 * Bezier curve for easing? How will it affect expand?
+* Try this for removing empty div:
+> `
+function stripEmptyWrapperDivs(html) {
+  const temp = document.createElement('div');
+  temp.innerHTML = html;
+  // Walk forward and remove only empty leading divs
+  while (
+    temp.firstChild && 
+    temp.firstChild.nodeType === 1 && 
+    temp.firstChild.tagName === 'DIV' &&
+    !temp.firstChild.textContent.trim() &&
+    !temp.firstChild.querySelector('*')  // no nested elements
+  ) {
+    temp.removeChild(temp.firstChild);
+  }
+  return temp.innerHTML;
+}
+  const divs = document.querySelectorAll('div');
+  divs.forEach(div => {
+    // Check if the div has no class assigned (classList.length === 0)
+    // and if its trimmed text content is empty
+    if (div.classList.length === 0 && div.textContent.trim() === '')
+`

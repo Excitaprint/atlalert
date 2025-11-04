@@ -107,7 +107,8 @@
         overflow: hidden;
         text-align: left;
         line-height: 1;
-        transition: 200ms;
+        /* transition: 500ms; */
+        transition: 1000ms cubic-bezier(0.25, 0.8, 0.25, 1);
     }
     .post:active {
         cursor: pointer;
@@ -135,7 +136,7 @@
         overflow: hidden;
         overflow-wrap: break-word;
         text-align: left;
-        transition: 100ms ease-in;
+        /* transition: 100ms ease-in; */
         line-height: 1;
 }
         .post.fade-out {
@@ -148,7 +149,7 @@
         overflow: hidden;
         overflow-wrap: break-word;
         text-align: left;
-        transition: 200ms cubic-bezier(0.25, 0.8, 0.25, 1);
+        /* transition: 1000ms cubic-bezier(0.25, 0.8, 0.25, 1); */
         /* transition: 200ms ease-out; */
         line-height: 1;
 }
@@ -213,14 +214,14 @@
         post.classList.add('fade-out');
         setTimeout(() => {
         post.classList.remove('fade-out');
-        }, 200);
+        }, 300);
         // post.style.backgroundColor = 'rgb(195, 214, 243)';
         });
         post.addEventListener('touchend', function() {
         post.classList.add('fade-out');
         setTimeout(() => {
         post.classList.remove('fade-out');
-        }, 200);
+        }, 300);
         // post.style.backgroundColor = 'rgb(195, 214, 243)';
         });
         });

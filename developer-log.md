@@ -118,6 +118,7 @@ The responding officer was not injured.\n' +
 
 # 
 
+* Tried: Animations height: auto; not fit-content' w/ transition: 100ms? Fixed?
 * IMPORTANT: Is cubic bezier not showing up on iOS/webkit?! 
 > Looks like it works on Windows/Chrome
 > Looks nice if I see it correctly on Windows/Chrome

@@ -118,6 +118,9 @@ The responding officer was not injured.\n' +
 
 # 
 
+* IMPORTANT: Is cubic bezier not showing up on iOS/webkit?! 
+> Looks like it works on Windows/Chrome
+> Looks nice if I see it correctly on Windows/Chrome
 * Rewrite animations so they're not wonky
 * Animation touch end thing
 * Bezier curve for easing? How will it affect expand?

@@ -210,17 +210,17 @@
         const clickColorDown = document.querySelectorAll('.post');
         clickColorDown.forEach(post => { 
         post.addEventListener('mouseup', function() {
-        post.classList.add('fade-in');
+        post.classList.add('fade-out');
         setTimeout(() => {
-        post.classList.remove('fade-in');
-        }, 300);
+        post.classList.remove('fade-out');
+        }, 200);
         // post.style.backgroundColor = 'rgb(195, 214, 243)';
         });
         post.addEventListener('touchend', function() {
-        post.classList.add('fade-in');
+        post.classList.add('fade-out');
         setTimeout(() => {
-        post.classList.remove('fade-in');
-        }, 300);
+        post.classList.remove('fade-out');
+        }, 200);
         // post.style.backgroundColor = 'rgb(195, 214, 243)';
         });
         });

@@ -151,6 +151,10 @@
     container.classList.add('grid-container');
     document.body.appendChild(container);
 
+    // document.addEventListener('DOMContentLoaded', () => {
+
+    // });
+
     fetch('titles.json')
     .then ( res => res.json())
     .then ( title => { 
@@ -159,6 +163,7 @@
             let bodyText = String(item.bodies);
             // bodyText = bodyText.replace(/\n/g, '<br>'), 
             bodyText = bodyText
+            .replace(/<div[^>]*>\s*<\/div>/gi, '')
             .replace(/<div[^>]*data-olk-copy-source=["']MessageBody["'][^>]*>([\s\S]*?)<\/div>/gi, '$1')
             .replace(/<div[^>]*>/gi, '<p>')
             .replace(/<\/div>/gi, '</p>')
@@ -167,7 +172,6 @@
             // .replace(/\n/g, '')
             .trim();
             
-
             let card = document.createElement('div');
             card.classList.add('post');
             card.innerHTML = `<span class="preview"><h1>${titleText}</h1><p>${bodyText}</p></span>`;
@@ -214,7 +218,8 @@
     // //     post.style.backgroundColor = 'rgb(253, 253, 253)';
     //     });
     // });
-});    
+});
+
 </script> 
 </body>
 </html>

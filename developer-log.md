@@ -115,3 +115,8 @@ The responding officer was not injured.\n' +
 
 * Use JS to calculate preview clamp for each item:
 > https://codepen.io/vsync/pen/eYbGgGL
+
+# 
+
+* Animation touch end thing
+* Bezier curve for easing? How will it affect expand?

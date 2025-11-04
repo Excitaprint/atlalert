@@ -118,9 +118,10 @@ The responding officer was not injured.\n' +
 
 # 
 
+* Rewrite animations so they're not wonky
 * Animation touch end thing
 * Bezier curve for easing? How will it affect expand?
-* Try this for removing empty div:
+* Try this for removing empty divs/extra ppg breaks:
 > `
 function stripEmptyWrapperDivs(html) {
   const temp = document.createElement('div');

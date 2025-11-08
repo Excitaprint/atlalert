@@ -4,8 +4,11 @@
 // temp = card, right? So I need to place JS there or before it? Mix it in?
 // nodeType 1 is ELEMENT_NODE for div or p tags
 
+// OR is card the better target object for stripping? See below
 
-function stripEmptyWrapperDivs(html) {
+
+function stripEmptyWrapperDivs(card) {
+  // stripEmptyDivs = (html) => { // New code starts in second .then, after let card = ?
   const temp = document.createElement('div');
   temp.innerHTML = html;
   // Walk forward and remove only empty leading divs

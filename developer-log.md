@@ -160,3 +160,5 @@ function stripEmptyWrapperDivs(html) {
 * Fix JPGs from scraped site root not working:
 > `card.innerHTML = src.replace(/^\/+/, 'https://www.example.com/');`
 * Increased preview card from 90 to 110. Keep?
+* Preview works w/ line-clamp/-webkit-line-clamp but:
+> Need to toggle class *.expanded on off on click 

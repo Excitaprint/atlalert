@@ -156,3 +156,4 @@ function stripEmptyWrapperDivs(html) {
 * Fix preview via:
 > https://codepen.io/vsync/pen/eYbGgGL
 * Next begin drawer, search & toggles.
+* Remove report #s (253_) & dates that precede titles?

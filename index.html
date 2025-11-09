@@ -192,7 +192,8 @@
             let card = document.createElement('div');
             card.classList.add('post');
             card.innerHTML = `<span class="preview"><h1>${titleText}</h1><p>${bodyText}</p></span>`;
-            card.innerHTML = card.innerHTML.replace(/<p[^>]*>(\s|&nbsp;)*<\/p>/gi, '').trim();
+            card.innerHTML = card.innerHTML.replace(/<p[^>]*>(\s|&nbsp;)*<\/p>/gi, '').trim(); 
+            // card.innerHTML = src.replace(/^\/+/, 'https://www.example.com/');
             container.appendChild(card);
             console.log(bodyText);
             // return card;

@@ -148,3 +148,8 @@ function stripEmptyWrapperDivs(html) {
     // and if its trimmed text content is empty
     if (div.classList.length === 0 && div.textContent.trim() === '')
 `
+
+# 
+
+* Fixed empty P tags w/ regex in click toggle event listener:
+> `card.innerHTML = card.innerHTML.replace(/<p[^>]*>(\s|&nbsp;)*<\/p>/gi, '').trim();`

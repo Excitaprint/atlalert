@@ -153,3 +153,6 @@ function stripEmptyWrapperDivs(html) {
 
 * Fixed empty P tags w/ regex in click toggle event listener:
 > `card.innerHTML = card.innerHTML.replace(/<p[^>]*>(\s|&nbsp;)*<\/p>/gi, '').trim();`
+* Fix preview via:
+> https://codepen.io/vsync/pen/eYbGgGL
+* Next begin drawer, search & toggles.

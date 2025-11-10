@@ -149,7 +149,7 @@ function stripEmptyWrapperDivs(html) {
     if (div.classList.length === 0 && div.textContent.trim() === '')
 `
 
-# 
+# 11/9/25
 
 * Fixed empty P tags w/ regex in click toggle event listener:
 > `card.innerHTML = card.innerHTML.replace(/<p[^>]*>(\s|&nbsp;)*<\/p>/gi, '').trim();`
@@ -162,3 +162,7 @@ function stripEmptyWrapperDivs(html) {
 * Increased preview card from 90 to 110. Keep?
 * Preview works w/ line-clamp/-webkit-line-clamp but:
 > Need to toggle class *.expanded on off on click 
+
+# 11/10/25
+
+* Only H1 in preview? 

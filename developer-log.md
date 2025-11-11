@@ -168,3 +168,9 @@ function stripEmptyWrapperDivs(html) {
 * Only H1 in preview? 
 * How are divs nesting? 
 > Figure this out before drawer container to know where to put it
+
+# 11/11/25
+
+* Fix underline under auto-detected addresses.
+> Can change to same color as BG, on light & dark mode, to hide,
+> but keep clickable.

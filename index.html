@@ -160,6 +160,9 @@
         /* transition: 200ms ease-out; */
         line-height: 1;
 }
+    #drawer {
+        width: max-width;
+    }
 </style>
 </head>
 <body>
@@ -206,6 +209,11 @@
             console.log(bodyText);
             // return card;
         });
+        // const drawer = document.createElement('div');
+        // drawer.classList.add('drawer')
+        // Give drawer parent of grid-container so it can sit above cards & slide down below?
+        // document.body.appendChild(container)
+
         const expand = document.querySelectorAll('.post');
             expand.forEach(post => {
             post.addEventListener('click', function() {

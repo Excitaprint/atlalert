@@ -166,3 +166,5 @@ function stripEmptyWrapperDivs(html) {
 # 11/10/25
 
 * Only H1 in preview? 
+* How are divs nesting? 
+> Figure this out before drawer container to know where to put it

@@ -17,14 +17,8 @@
         --tercery-color-drk: #888888;
     } */
     html {
-        scroll-behavior: smooth;
-        contain: layout;
-        /* --main-color: #FFFFFF   
-        --secondary-color: #000000;
-        --tercery-color: #888888;
-        --main-color-drk: #FFFFFF   
-        --secondary-color-drk: #000000;
-        --tercery-color-drk: #888888; */
+    contain: layout;
+    scroll-behavior: smooth;
     }
     a {
         color: inherit;
@@ -37,7 +31,7 @@
     ::-webkit-scrollbar { 
         display: none; 
     }
-    body {
+    body {  
         margin: 0 auto;
         padding: 12px;
         background-color: #d3d3d3;
@@ -45,7 +39,7 @@
         font-optical-sizing: auto;
         display: grid;
         align-items: center;
-        justify-content: center;      
+        justify-content: center;  
         /* max-width: fit-content; */
     }
     .grid-container {
@@ -132,7 +126,6 @@
         overflow: hidden;
         text-align: left;
         line-height: 1;
-        /* transition: 500ms; */
         transition: 700ms cubic-bezier(0.25, 0.8, 0.25, 1);
     }
     .post:active {
@@ -144,6 +137,7 @@
     .drawer {
         cursor: pointer;
         position: fixed;
+        contain: none;
         top: 0;
         left: 0;
         right: 0;
@@ -155,7 +149,7 @@
         z-index: 1000;
         transform: translateY(-90%);   /* Mostly hidden on app open */
         transition: transform 200ms ease;
-        border-radius: 0 0 16px 16px;     
+        border-radius: 0 0 16px 16px;
     }
     .drawer::after {
         content: '';

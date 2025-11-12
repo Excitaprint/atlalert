@@ -174,3 +174,7 @@ function stripEmptyWrapperDivs(html) {
 * Fix underline under auto-detected addresses.
 > Can change to same color as BG, on light & dark mode, to hide,
 > but keep clickable.
+
+# 11/12/25
+
+* Fixed img urls w/ regex.

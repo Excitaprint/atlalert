@@ -56,6 +56,14 @@
         minmax(90px, 1fr));
         gap: 9.5px;        
     }
+    i img {
+        display: block !important;
+        margin: 0px auto !important;
+        max-width: 75%;
+        height: auto;
+        text-align: center;
+        border-radius: 12px;
+}
     h1 a {
         color: inherit;
         text-decoration: none;
@@ -207,11 +215,20 @@
             .replace(/<div>*>(\s|&nbsp;)*<\/div>/gi, '')
             .trim();
             
+//             let fixedURL = src.replace(
+//      /(src=["'])\/home\/showpublishedimage/gi,
+//     '$1https://www.atlantapd.org/home/showpublishedimage'
+//   );
             let card = document.createElement('div');
             card.classList.add('post');
             card.innerHTML = `<span class="preview"><h1>${titleText}</h1><p>${bodyText}</p></span>`;
-            card.innerHTML = card.innerHTML.replace(/<p[^>]*>(\s|&nbsp;)*<\/p>/gi, '').trim(); 
-            // card.innerHTML = src.replace(/^\/+/, 'https://www.example.com/');
+            card.innerHTML = card.innerHTML
+            .replace(/<p[^>]*>(\s|&nbsp;)*<\/p>/gi, '')
+            .trim()
+            .replace(
+                /(src=["'])(\/home\/showpublishedimage\/[^"']*)/gi,
+                '$1https://www.atlantapd.org$2'
+            );
             container.appendChild(card);
             console.log(bodyText);
             // return card;

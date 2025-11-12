@@ -178,3 +178,5 @@ function stripEmptyWrapperDivs(html) {
 # 11/12/25
 
 * Fixed img urls w/ regex.
+* Built drawer w/ toggle & bar.
+* Did iPhone map dots get fixed too?

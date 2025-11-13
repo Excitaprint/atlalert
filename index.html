@@ -31,7 +31,7 @@
     ::-webkit-scrollbar { 
         display: none; 
     }
-    body {  
+    body {
         margin: 0 auto;
         padding: 12px;
         background-color: #d3d3d3;
@@ -228,10 +228,11 @@
         const expand = document.querySelectorAll('.post');
             expand.forEach(post => {
             post.addEventListener('click', function() {
-            expand.forEach(post => post.style.height = '110px'); // sets all cards to 90px before expanding selected card
-            setTimeout(() => { 
-            // this.style.height = this.style.height ===  '216px' ? '90px' : '216px'},0);
-            this.style.height = this.style.height ===  'auto' ? '110px' : 'auto'},0);
+            expand.forEach(post => { if ( post !== this ) post.style.height = '110px'}); // sets all cards to 90px before expanding selected card
+            // setTimeout(() => { 
+            // this.style.height = this.style.height ===  'auto' ? '110px' : 'auto'},0);
+            this.style.height = this.style.height !== '110px' ? '110px' : 'auto'; // ,0);
+            // if post style.height != '110px' then click sets it to 110px, else auto
             // Write so on click .preview becomes .preview.expanded
             // if (!p == post) { 
             // p.querySelector('.preview').classList.remove('expanded');

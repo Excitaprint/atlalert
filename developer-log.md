@@ -180,3 +180,10 @@ function stripEmptyWrapperDivs(html) {
 * Fixed img urls w/ regex.
 * Built drawer w/ toggle & bar.
 * Did iPhone map dots get fixed too?
+
+# 11/13/25
+
+* Added click second time to collapse on expanded cards but:
+> Card is not expanding on first click
+> Need to add that asap!
+> // if no cards in dom expanded, on first click expand to auto

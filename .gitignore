@@ -1,6 +1,6 @@
 # Comment (*.MD, /docs, filename.js)
 
-# stripemptydivs.js 
+stripemptydivs.js 
 
 *.swp
 *.swo

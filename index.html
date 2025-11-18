@@ -197,21 +197,18 @@
     </div>  -->
     <script>
 
-        //  Put DOMLoaded thing here? What exactly does it do?
-        // document.addEventListener('DOMContentLoaded', () => {
-
         document.addEventListener('DOMContentLoaded', (event) => {
 
         const container = document.createElement('div');
         container.classList.add('grid-container');
         document.body.appendChild(container);
 
-
         // Add main event listeners here,
         // then figure out how to have them figure out
-        // which div is clicked on click, etc
+        // which div is clicked on click, etc?
         // Will this stop the janky animation on JoyTab?
 
+        // Fetch JSON & populate cards
         fetch('titles.json')
             .then(res => res.json())
             .then(title => {
@@ -255,18 +252,9 @@
                 const expand = document.querySelectorAll('.post');
                 expand.forEach(post => {
                     post.addEventListener('click', function () {
-                        expand.forEach(post => { if (post !== this) post.style.height = '110px' }); // sets all cards to 90px before expanding selected card
-                        // setTimeout(() => { 
-                        // this.style.height = this.style.height ===  'auto' ? '110px' : 'auto'},0);
+                        expand.forEach(post => { if (post !== this) post.style.height = '110px' }); // sets cards to 110px before on click expansion
+                        // this.style.height = this.style.height ===  'auto' ? '110px' : 'auto'}
                         this.style.height = this.style.height !== '110px' ? '110px' : 'auto';
-                        // if post style.height != '110px' then click sets it to 110px, else auto
-                        // Write so on click .preview becomes .preview.expanded
-                        // if (!p == post) { 
-                        // p.querySelector('.preview').classList.remove('expanded');
-                        //} else { 
-                        // post.querySelector('preview');
-                        // preview.classList.toggle('expanded');
-                        // }
                         console.log('clicked' + this);
                     });
                 });

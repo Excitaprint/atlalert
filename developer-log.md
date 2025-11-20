@@ -187,3 +187,9 @@ function stripEmptyWrapperDivs(html) {
 > Card is not expanding on first click
 > Need to add that asap!
 > // if no cards in dom expanded, on first click expand to auto
+
+# 11/20/25
+
+* Fixed expand on first click in DOM
+* Fix text preview
+> Calculate chars minus padding before line that clips via JS

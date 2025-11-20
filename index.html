@@ -252,9 +252,9 @@
                 const expand = document.querySelectorAll('.post');
                 expand.forEach(post => {
                     post.addEventListener('click', function () {
+                        this.style.height = this.style.height === 'auto' ? '110px' : 'auto';
                         expand.forEach(post => { if (post !== this) post.style.height = '110px' }); // sets cards to 110px before on click expansion
                         // this.style.height = this.style.height ===  'auto' ? '110px' : 'auto'}
-                        this.style.height = this.style.height !== '110px' ? '110px' : 'auto';
                         console.log('clicked' + this);
                     });
                 });

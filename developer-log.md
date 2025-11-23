@@ -193,3 +193,8 @@ function stripEmptyWrapperDivs(html) {
 * Fixed expand on first click in DOM
 * Fix text preview
 > Calculate chars minus padding before line that clips via JS
+
+# 11/23/25
+
+* Fix drawer Zen glitch!
+* Fix text preview!

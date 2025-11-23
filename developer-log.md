@@ -197,4 +197,6 @@ function stripEmptyWrapperDivs(html) {
 # 11/23/25
 
 * Fix drawer Zen glitch!
+> First noticed when switched Pages to 'main' from 'develop'
+> Is it a Zen glitch or is it related to 'main' vs 'develop'?
 * Fix text preview!

@@ -200,3 +200,7 @@ function stripEmptyWrapperDivs(html) {
 > First noticed when switched Pages to 'main' from 'develop'
 > Is it a Zen glitch or is it related to 'main' vs 'develop'?
 * Fix text preview!
+
+# 11/25/25
+
+* Try inverse H1 half of card

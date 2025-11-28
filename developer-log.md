@@ -204,3 +204,7 @@ function stripEmptyWrapperDivs(html) {
 # 11/25/25
 
 * Try inverse H1 half of card
+
+# 11/28/25
+
+* Remove "2530XXXXX" case # and "Preliminary Statement:"?

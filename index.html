@@ -137,7 +137,7 @@
             background-color: rgb(253, 253, 253);
             border-radius: 16px;
             border: 0.875px solid #4429be;
-            height: 110px;
+            height: 120px;
             /* white-space: pre-wrap;
             overflow-wrap: break-word; */
             text-overflow: ellipsis;
@@ -181,7 +181,7 @@
             bottom: 6px;
             left: 50%;
             transform: translateX(-50%);
-            width: 90%;
+            width: 30px;
             height: 2px;
             background-color: #dbdbdb;
             border-radius: 1px;
@@ -256,8 +256,8 @@
                 const expand = document.querySelectorAll('.post');
                 expand.forEach(post => {
                     post.addEventListener('click', function () {
-                        this.style.height = this.style.height === 'auto' ? '110px' : 'auto';
-                        expand.forEach(post => { if (post !== this) post.style.height = '110px' }); // sets cards to 110px before on click expansion
+                        this.style.height = this.style.height === 'auto' ? '120px' : 'auto';
+                        expand.forEach(post => { if (post !== this) post.style.height = '120px' }); // sets cards to 110px before on click expansion
                         // this.style.height = this.style.height ===  'auto' ? '110px' : 'auto'}
                         console.log('clicked' + this);
                     });

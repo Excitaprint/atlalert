@@ -224,3 +224,6 @@ function stripEmptyWrapperDivs(html) {
 > Finish color pallete, apply with listener
 > Add 'search' input then get the grid together
 > psuedo buttons
+* Drawer grid (start w search Input on row 2):
+> 3 rows after 1 small row for logo (left) dark switch (right)
+> Put dark mode on right, top across from logo

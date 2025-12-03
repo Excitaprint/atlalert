@@ -208,3 +208,19 @@ function stripEmptyWrapperDivs(html) {
 # 11/28/25
 
 * Remove "2530XXXXX" case # and "Preliminary Statement:"?
+
+# 12/1/25 
+
+* Gradient transparent to fade out for card previews
+> Give it class addList on click
+> Use css ::after to apply to preview div?
+> But don't think I have a preview div, so I need to create it &
+> re-edit the JS toggle? Wow if so lol
+* Start array search input
+
+# 12/3/25
+
+* Dark mode
+> Finish color pallete, apply with listener
+> Add 'search' input then get the grid together
+> psuedo buttons

@@ -110,6 +110,7 @@
             margin: 0;
             /* overflow: hidden; */
             color: #4429be;
+            /* text-indent: 25px;  */
         }
 
         .preview {
@@ -190,17 +191,24 @@
         .drawer.open {
             transform: translateY(0);
         }
-        .search-input {
-            /* position: ;
-            width: calc()
-            corner-radius: ;
-            border-radius: ;
-            padding: ;
-            z-index: ;
-            inner-shadow: ;
-            
-            */
 
+        .search-input {
+            position: fixed;
+            font-family: "JetBrains Mono", monospace;
+            font-optical-sizing: auto;
+            display: grid;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* width: calc(50% - 6px); */
+            width: 50%;
+            background: inherit;
+            border-radius: 12px;
+            border: 0.875px solid #4429be;
+            padding: 4px;
+            z-index: 1001;
+            box-shadow: inset -2px 2px 8px rgba(0, 0, 0, 0.05);    
+            text-indent: 4px;        
         }
     </style>
 </head>
@@ -260,14 +268,16 @@
                 let drawer = document.createElement('div');
                 drawer.classList.add('drawer');
                 document.body.appendChild(drawer);
+
                 let search = document.createElement('input');
                 search.type = 'text';
                 search.placeholder = 'Search...';
                 search.classList.add('search-input');                
-                document.body.appendChild(search); // or (drawer);?
+                drawer.appendChild(search); // or (drawer);?
                 
             
                 drawer.addEventListener('click', () => {
+                    // Add if search-input clicked, do not toggle
                     drawer.classList.toggle('open');
                 });
                 

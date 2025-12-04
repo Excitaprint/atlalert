@@ -229,3 +229,15 @@ function stripEmptyWrapperDivs(html) {
 * Drawer grid (start w search Input on row 2):
 > 3 rows after 1 small row for logo (left) dark switch (right)
 > Put dark mode on right, top across from logo
+
+# 12/4/25
+
+* Added search
+> Display hidden for demo
+> Bug: if search-input clicked, do not toggle
+* Finish dark mode & drawer grid
+> Have logo on one side of top row &,
+> aA & light/dark sun/moon toggle on opposite that
+* Card preview CSS fadeout still needed
+* Text indent `<p>` bug (commented out): 
+> `text-indent: 25px;` only if text is more than 1 line

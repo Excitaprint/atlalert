@@ -197,6 +197,7 @@
             font-family: "JetBrains Mono", monospace;
             font-optical-sizing: auto;
             display: grid;
+            font-size: 13.5px;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -273,16 +274,13 @@
                 search.type = 'text';
                 search.placeholder = 'Search...';
                 search.classList.add('search-input');                
-                drawer.appendChild(search); // or (drawer);?
+                drawer.appendChild(search);
                 
-            
                 drawer.addEventListener('click', () => {
                     // Add if search-input clicked, do not toggle
                     drawer.classList.toggle('open');
                 });
                 
-                
-
                 // Cards expand on click
                 const expand = document.querySelectorAll('.post');
                 expand.forEach(post => {

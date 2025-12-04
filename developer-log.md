@@ -241,3 +241,4 @@ function stripEmptyWrapperDivs(html) {
 * Card preview CSS fadeout still needed
 * Text indent `<p>` bug (commented out): 
 > `text-indent: 25px;` only if text is more than 1 line
+* Bug: change weird focus color on input (orange-ish?)

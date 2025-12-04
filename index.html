@@ -190,6 +190,18 @@
         .drawer.open {
             transform: translateY(0);
         }
+        .search-input {
+            /* position: ;
+            width: calc()
+            corner-radius: ;
+            border-radius: ;
+            padding: ;
+            z-index: ;
+            inner-shadow: ;
+            
+            */
+
+        }
     </style>
 </head>
 
@@ -244,15 +256,22 @@
                     // return card;
                 });
 
-                // Drawer menu
+                // Drawer menu & child elements
                 let drawer = document.createElement('div');
                 drawer.classList.add('drawer');
                 document.body.appendChild(drawer);
+                let search = document.createElement('input');
+                search.type = 'text';
+                search.placeholder = 'Search...';
+                search.classList.add('search-input');                
+                document.body.appendChild(search); // or (drawer);?
+                
+            
                 drawer.addEventListener('click', () => {
                     drawer.classList.toggle('open');
                 });
                 
-                // Drawer child elements/menu here
+                
 
                 // Cards expand on click
                 const expand = document.querySelectorAll('.post');

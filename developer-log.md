@@ -223,7 +223,9 @@ function stripEmptyWrapperDivs(html) {
 * Dark mode
 > Finish color pallete, apply with listener
 > Add 'search' input then get the grid together
-> psuedo buttons
+> psuedo buttons.
+> What to do with drop shadow on drawer in dark mode?
+> No white shadows?
 * Drawer grid (start w search Input on row 2):
 > 3 rows after 1 small row for logo (left) dark switch (right)
 > Put dark mode on right, top across from logo

@@ -255,3 +255,4 @@ function stripEmptyWrapperDivs(html) {
 > cut zoom off completely? Zoom back out after enter?
 * Added no user scale in meta tags: keep as perm fix?
 * Add card preview gradient, text indent
+* Try 16px to 20px gap between cards in grid div?

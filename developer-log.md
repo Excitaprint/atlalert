@@ -252,4 +252,5 @@ function stripEmptyWrapperDivs(html) {
 > Pressing checkmark on iOS doesn't close drawer
 > iOS zooms in to type, but doesn't zoom out after pressing enter:
 > cut zoom off completely? Zoom back out after enter?
+* Added no user scale in meta tags: keep as perm fix?
 * Add card preview, text indent

@@ -233,7 +233,6 @@ function stripEmptyWrapperDivs(html) {
 # 12/4/25
 
 * Added search
-> Display hidden for demo
 > Bug: if search-input clicked, do not toggle
 * Finish dark mode & drawer grid
 > Have logo on one side of top row &,
@@ -242,3 +241,10 @@ function stripEmptyWrapperDivs(html) {
 * Text indent `<p>` bug (commented out): 
 > `text-indent: 25px;` only if text is more than 1 line
 * Bug: change weird focus color on input (orange-ish?)
+
+# 12/5/25
+
+* Added search
+> BG color bug, was a weird line,
+> but disappears when assigning bg color to html, not body
+* Add card preview, text indent, remove search 'X' for all posts

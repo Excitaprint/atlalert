@@ -21,6 +21,7 @@
         html {
             contain: layout;
             scroll-behavior: smooth;
+            background-color: #f0f0f0bd;
         }
 
         a {
@@ -40,7 +41,7 @@
         body {
             margin: 0 auto;
             padding: 12px;
-            background-color: #f0f0f0bd;
+            /* background-color: #f0f0f0bd; */
             font-family: "JetBrains Mono", monospace;
             font-optical-sizing: auto;
             display: grid;
@@ -211,6 +212,12 @@
             box-shadow: inset -2px 2px 8px rgba(0, 0, 0, 0.05);    
             text-indent: 4px;        
         }
+
+        .search-input:focus,
+        .search-input:active {
+            outline: none;
+            border: 0.875px solid #8369f7 !important;
+        }        
     </style>
 </head>
 
@@ -269,18 +276,46 @@
                 let drawer = document.createElement('div');
                 drawer.classList.add('drawer');
                 document.body.appendChild(drawer);
+              
+                drawer.addEventListener('click', (event) => {
+                    // If search-input clicked, do not toggle drawer
+                    if (event.target === search) return;
+                    else {
+                    drawer.classList.toggle('open')
+                    }
+                });
 
                 let search = document.createElement('input');
                 search.type = 'text';
                 search.placeholder = 'Search...';
-                search.classList.add('search-input');                
+                search.classList.add('search-input');
                 drawer.appendChild(search);
-                
-                drawer.addEventListener('click', () => {
-                    // Add if search-input clicked, do not toggle
-                    drawer.classList.toggle('open');
+               
+                // Search logic
+                const searchInput = document.querySelector('.search-input');
+                const posts = document.querySelectorAll('.post');
+
+                searchInput.addEventListener('input', (event) => {
+                const query = event.target.value.toLowerCase().trim();
+                posts.forEach(post => {
+                    const text = post.textContent.toLowerCase();
+
+                    if (text.includes(query)) {
+                        post.style.display = '';
+                    } else { 
+                        post.style.display = 'none';
+                    }
+                });
                 });
                 
+                searchInput.addEventListener('keydown', (event) => {
+                    if (event.key === 'Enter' || 
+                        event.key === 'Escape') {
+                        drawer.classList.remove('open');
+                        searchInput.blur();
+                    }
+                });
+                            
                 // Cards expand on click
                 const expand = document.querySelectorAll('.post');
                 expand.forEach(post => {

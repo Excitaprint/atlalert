@@ -248,9 +248,10 @@ function stripEmptyWrapperDivs(html) {
 > BG color bug, was a weird line,
 > but disappears when assigning bg color to html, not body
 * Search bugs:
-> Add remove search 'X' to view all posts after search done
+> Add remove search 'X' to view all posts after search done,
+> fix: Display above card: 'Results for: Query" with X to clear
 > Pressing checkmark on iOS doesn't close drawer
 > iOS zooms in to type, but doesn't zoom out after pressing enter:
 > cut zoom off completely? Zoom back out after enter?
 * Added no user scale in meta tags: keep as perm fix?
-* Add card preview, text indent
+* Add card preview gradient, text indent

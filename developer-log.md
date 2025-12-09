@@ -261,4 +261,7 @@ function stripEmptyWrapperDivs(html) {
 
 * Swapped search input; text -> search,
 > This only works on Webkit/Chrome
-> Need custom solution for full compatibility
+* Create custom solution for full compatiblity:
+> 'Create the wrapper first, append the input to the wrapper, 
+> append the image to the wrapper, and then append the wrapper to the drawer.'
+* Remove Webkit/Chrome 'search clearing X' after this implemented

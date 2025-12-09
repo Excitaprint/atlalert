@@ -256,3 +256,9 @@ function stripEmptyWrapperDivs(html) {
 * Added no user scale in meta tags: keep as perm fix?
 * Add card preview gradient, text indent
 * Try 16px to 20px gap between cards in grid div?
+
+# 
+
+* Swapped search input; text -> search,
+> This only works on Webkit/Chrome
+> Need custom solution for full compatibility

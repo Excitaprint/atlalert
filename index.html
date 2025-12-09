@@ -220,6 +220,14 @@
             outline: none;
             border: 0.875px solid #8369f7 !important;
         }        
+
+        /* This wil only show on Webkit & Chrome, need custom solution for compatibility */
+        .search-input::-webkit-search-cancel-button {
+            -webkit-appearance: relative;
+            background-color: #4429be;
+            width: 10px;
+            height: 10px;
+        }
     </style>
 </head>
 
@@ -288,7 +296,7 @@
                 });
 
                 let search = document.createElement('input');
-                search.type = 'text';
+                search.type = 'search';
                 search.placeholder = 'Search...';
                 search.classList.add('search-input');
                 drawer.appendChild(search);

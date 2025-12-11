@@ -257,7 +257,7 @@ function stripEmptyWrapperDivs(html) {
 * Add card preview gradient, text indent
 * Try 16px to 20px gap between cards in grid div?
 
-# 
+# 12/9/25
 
 * Swapped search input; text -> search,
 > This only works on Webkit/Chrome
@@ -265,3 +265,11 @@ function stripEmptyWrapperDivs(html) {
 > 'Create the wrapper first, append the input to the wrapper, 
 > append the image to the wrapper, and then append the wrapper to the drawer.'
 * Remove Webkit/Chrome 'search clearing X' after this implemented
+
+# 12/11/25
+
+* Finish 'read more' gradient
+* Finish search input 'X' clear button
+> Remove existing Webkit/Chrome 'X' after implemented
+* Built '.gradient', but buggy, fixed now not working
+* Paint gradient when adding posts around line 273?

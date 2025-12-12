@@ -354,15 +354,20 @@
                     gradient.classList.add('gradient');
                     post.appendChild(gradient);
                     post.addEventListener('click', function () {
-                        // gradient.style.display = 'none';
-                        // post.classList.toggle('gradient');
                         this.style.height = this.style.height === 'auto' ? '120px' : 'auto';
                         expand.forEach(post => { if (post !== this) post.style.height = '120px' }); 
                         gradient.style.display = gradient.style.display === 'none' ? 'block' : 'none';
                         
+                        // This work? How to set all to 'block' except clicked one, at all times?
+                        // if (post !== 'clicked') {
+                        //     gradient.style.display = 'block';
+                        // } else if (post === 'clicked') {
+                        //     gradient.style.display = 'none';
+                        // };
+                });
+                        
                         console.log('clicked' + this);
                     });
-                });
 
                 // BG change on mouseup / touchend
                 const clickColorDown = document.querySelectorAll('.post');

@@ -153,14 +153,15 @@
         }
 
         .gradient {
+            display: block;
             position: absolute;
+            inset: 0;
             overflow: hidden;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, transparent 65%, rgb(253, 253, 253) 100%);
+            background: linear-gradient(to bottom, transparent 70%, rgb(253, 253, 253) 100%);
             filter: blur(.875px);
-            background-blend-mode: multiply;
+            background-blend-mode: darken, multiply;
             pointer-events: none;
+            z-index: 10;
         }
 
         .post:active {
@@ -346,16 +347,19 @@
                 });
                             
                 // Cards expand on click & gradient add/removal
-                const expand = document.querySelectorAll('.post');
-                const gradient = document.createElement('div');
-        
+                const expand = document.querySelectorAll('.post');  
                 
                 expand.forEach(post => {
-                    
+                    const gradient = document.createElement('div');
+                    gradient.classList.add('gradient');
+                    post.appendChild(gradient);
                     post.addEventListener('click', function () {
-                        post.classList.remove('gradient');
+                        // gradient.style.display = 'none';
+                        // post.classList.toggle('gradient');
                         this.style.height = this.style.height === 'auto' ? '120px' : 'auto';
-                        expand.forEach(post => { if (post !== this) post.style.height = '120px' }); // sets cards to 120px before on click expansion
+                        expand.forEach(post => { if (post !== this) post.style.height = '120px' }); 
+                        gradient.style.display = gradient.style.display === 'none' ? 'block' : 'none';
+                        
                         console.log('clicked' + this);
                     });
                 });

@@ -273,3 +273,11 @@ function stripEmptyWrapperDivs(html) {
 > Remove existing Webkit/Chrome 'X' after implemented
 * Built '.gradient', but buggy, fixed now not working
 * Paint gradient when adding posts around line 273?
+
+# 12/12/25
+
+* Finished 'read more' gradient w/ tertiary CSS toggle
+> Test w/ users, ask honest feedback
+> Explain clean look w/ correct paddding/geometry &,
+> ask users if it's better
+* Finish custom search 'X'

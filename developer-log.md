@@ -281,3 +281,4 @@ function stripEmptyWrapperDivs(html) {
 > Explain clean look w/ correct paddding/geometry &,
 > ask users if it's better
 * Finish custom search 'X'
+* Nix blue highlight on click, on expanded card 

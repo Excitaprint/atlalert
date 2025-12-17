@@ -282,3 +282,8 @@ function stripEmptyWrapperDivs(html) {
 > ask users if it's better
 * Finish custom search 'X'
 * Nix blue highlight on click, on expanded card 
+
+12/17/25
+
+* Remove indent if text doesn't exceed 1 line
+> Happening in case no. `<p>`, etc.

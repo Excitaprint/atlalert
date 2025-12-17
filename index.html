@@ -302,6 +302,11 @@
                             /(src=["'])(\/home\/showpublishedimage\/[^"']*)/gi,
                             '$1https://www.atlantapd.org$2'
                         );
+                    // Remove indent if text doesn't overflow
+                    let p = card.querySelector('p');
+                    if  (p.scrollHeight <= p.offsetHeight)  {
+                        p.style.textIndent = '0px';
+                        };
                     container.appendChild(card);
                     console.log(bodyText);
                     // return card;

@@ -283,7 +283,11 @@ function stripEmptyWrapperDivs(html) {
 * Finish custom search 'X'
 * Nix blue highlight on click, on expanded card 
 
-12/17/25
+# 12/17/25
 
 * Remove indent if text doesn't exceed 1 line
 > Happening in case no. `<p>`, etc.
+* Keep 'read more' gradient, passed user test
+* Finish search 'X', put in // Search logic block?
+* Nix blue highlight on click
+* Fix expand/'read more' toggle bug w/ boolean if statement?

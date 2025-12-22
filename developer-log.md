@@ -291,3 +291,9 @@ function stripEmptyWrapperDivs(html) {
 * Finish search 'X', put in // Search logic block?
 * Nix blue highlight on click
 * Fix expand/'read more' toggle bug w/ boolean if statement?
+
+# 12/22/25
+
+* Search X architecture: wrapper div gets border, etc. & looks like search box
+> Strip away styling from input field, place in wrapper with sibiling, the icon div
+> Use flex-grow: 1 to add column for both children (input & X)

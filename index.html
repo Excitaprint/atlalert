@@ -165,7 +165,6 @@
             /* filter: blur(0.875px); */
             /* background-blend-mode: darker; */
             pointer-events: none;
-            /* z-index: 10; */
         }
 
         .post:active {
@@ -212,33 +211,22 @@
             transform: translateY(0);
         }
 
-        /* .search-wrapper {
-            position: fixed;
-            display: grid;
-            font-family: "JetBrains Mono", monospace;
-            font-optical-sizing: auto;
-            font-size: 13.5px;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 50%;
-            background: inherit;
-            border-radius: 12px;
-            border: 1.991px solid #4429be;
-            padding: 4px;
-            z-index: 1002;
-            box-shadow: inset -2px 2px 8px rgba(0, 0, 0, 0.05);    
-            text-indent: 4px;  
-        } */
+        input {
+            appearance: none;
+            -webkit-appearance: none;
+            outline: 0 !important;
+            box-shadow: none !important;
+            border: 0 !important;
+            background: transparent;
+            -webkit-tap-highlight-color: transparent; /* Fixes mobile tap boxes */
+            background: none;
+        }
 
-        .search-input {
-            position: fixed;
-            /* position: absolute; */
-            /* top: 0;
-            left: 0; */
+        .search-wrapper {
+            position: absolute;
+            display: flex;
             font-family: "JetBrains Mono", monospace;
             font-optical-sizing: auto;
-            display: grid;
             font-size: 13.5px;
             top: 50%;
             left: 50%;
@@ -247,17 +235,33 @@
             background: inherit;
             border-radius: 12px;
             border: 1.991px solid #4429be;
-            padding: 4px;
             z-index: 1001;
             box-shadow: inset -2px 2px 8px rgba(0, 0, 0, 0.05);    
+            text-indent: 4px;  
+        }
+        
+        .search-wrapper:focus,
+        .search-wrapper:active {
+            border: 1.991px solid #8369f7 !important;
+        }       
+
+        .search-input {
+            position: relative;
+            font-family: "JetBrains Mono", monospace;
+            font-optical-sizing: auto;
+            font-size: 13.5px;
+            width: 100%;
+            height: 100%;
+            padding: 4px;
+            z-index: 1001; 
             text-indent: 4px;        
         }
 
         .search-input:focus,
         .search-input:active {
             outline: none;
-            /* border: 0.875px solid #8369f7 !important; */
-            border: 1.991px solid #8369f7 !important;
+            border: none;
+            box-shadow: none;
         }        
 
         /* This wil only show on Webkit & Chrome, need custom solution for compatibility 

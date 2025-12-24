@@ -241,6 +241,7 @@
         }
         
         .search-wrapper:focus,
+        .search-wrapper:focus-within,
         .search-wrapper:active {
             border: 1.991px solid #8369f7 !important;
         }       
@@ -254,7 +255,14 @@
             height: 100%;
             padding: 4px;
             z-index: 1001; 
-            text-indent: 4px;        
+            text-indent: 4px;       
+        }
+
+        .search-input::-webkit-search-cancel-button,
+        .search-input::-webkit-search-results-button,
+        .search-input::-webkit-search-results-decoration {
+            display: none;
+            -webkit-appearance: none;
         }
 
         .search-input:focus,
@@ -262,15 +270,14 @@
             outline: none;
             border: none;
             box-shadow: none;
-        }        
-
-        /* This wil only show on Webkit & Chrome, need custom solution for compatibility 
-        .search-input::-webkit-search-cancel-button {
-            -webkit-appearance: relative;
-            background-color: #4429be;
-            width: 10px;
-            height: 10px;
-        } */
+        }
+        
+        .search-x  {
+            position: relative;
+            width: 12px;
+            padding-right: 8px;
+            /* fill: #4429be; */
+        }
 
     </style>
 </head>
@@ -356,6 +363,15 @@
                 search.placeholder = 'Search...';
                 search.classList.add('search-input');
                 searchWrapper.appendChild(search);
+
+                let searchX = document.createElement('img');
+                searchX.src = '/img/search-x-icon.svg';
+                searchX.classList.add('search-x');
+                searchWrapper.appendChild(searchX);
+
+                    // if (!search.value) {
+                    // searchX.style.display = 'none';
+                    // }
                
                 // Search logic
                 const searchInput = document.querySelector('.search-input');
@@ -363,6 +379,7 @@
 
                 searchInput.addEventListener('input', (event) => {
                 const query = event.target.value.toLowerCase().trim();
+
                 posts.forEach(post => {
                     const text = post.textContent.toLowerCase();
 
@@ -371,6 +388,7 @@
                     } else { 
                         post.style.display = 'none';
                     }
+
                 });
                 });
                 

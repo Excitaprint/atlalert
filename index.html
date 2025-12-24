@@ -212,12 +212,30 @@
             transform: translateY(0);
         }
 
-        .search-input-wrapper {
+        /* .search-wrapper {
             position: fixed;
-        }
+            display: grid;
+            font-family: "JetBrains Mono", monospace;
+            font-optical-sizing: auto;
+            font-size: 13.5px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50%;
+            background: inherit;
+            border-radius: 12px;
+            border: 1.991px solid #4429be;
+            padding: 4px;
+            z-index: 1002;
+            box-shadow: inset -2px 2px 8px rgba(0, 0, 0, 0.05);    
+            text-indent: 4px;  
+        } */
 
         .search-input {
             position: fixed;
+            /* position: absolute; */
+            /* top: 0;
+            left: 0; */
             font-family: "JetBrains Mono", monospace;
             font-optical-sizing: auto;
             display: grid;
@@ -225,11 +243,9 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            /* width: calc(50% - 6px); */
             width: 50%;
             background: inherit;
             border-radius: 12px;
-            /* border: 0.875px solid #4429be; */
             border: 1.991px solid #4429be;
             padding: 4px;
             z-index: 1001;
@@ -251,12 +267,6 @@
             width: 10px;
             height: 10px;
         } */
-
-        .search-wrapper {
-            top: 50%;
-            float: right;
-            padding-right: 2px;
-        }
 
     </style>
 </head>
@@ -331,11 +341,17 @@
                 });
 
                 // Add wrapper for search-input & include 'X' icon
+                // .search-wrapper
+                // if text in input, show X & clear text on click
+                let searchWrapper = document.createElement('div');
+                searchWrapper.classList.add('search-wrapper');
+                drawer.appendChild(searchWrapper);
+                
                 let search = document.createElement('input');
                 search.type = 'search';
                 search.placeholder = 'Search...';
                 search.classList.add('search-input');
-                drawer.appendChild(search);
+                searchWrapper.appendChild(search);
                
                 // Search logic
                 const searchInput = document.querySelector('.search-input');

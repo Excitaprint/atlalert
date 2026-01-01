@@ -311,3 +311,10 @@ function stripEmptyWrapperDivs(html) {
 * Add X div & X as bg
 > Add logic & ship (see comments)
 > Add if conditional for 2nd card non-indent bug?
+
+# 1/1/25
+
+* Card issue; logic is broken for indenting:
+> Second card not indenting, but it should per the logic!?
+> Would this work? if (p.width > div.width) then p.style.textIndent = XXpx FIX?
+* 'X' not appearing when text is in field like it should

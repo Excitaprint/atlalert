@@ -310,3 +310,4 @@ function stripEmptyWrapperDivs(html) {
 
 * Add X div & X as bg
 > Add logic & ship (see comments)
+> Add if conditional for 2nd card non-indent bug?

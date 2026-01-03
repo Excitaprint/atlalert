@@ -371,9 +371,9 @@
                 searchX.classList.add('search-x');
                 searchWrapper.appendChild(searchX);
 
-                //    if (search.value) {
-                //     searchX.style.display = 'none';
-                //     }
+                   if (!search.value) {
+                    searchX.style.display = 'none';
+                    }
                
                 // Search logic
                 const searchInput = document.querySelector('.search-input');

@@ -322,3 +322,5 @@ function stripEmptyWrapperDivs(html) {
 # 1/3/26
 
 * Am I missing listener on search in function? See comments
+> Try that & this instead of (!search.value):
+> https://developer.mozilla.org/en-US/docs/Web/API/InputEvent

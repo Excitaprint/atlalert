@@ -318,3 +318,7 @@ function stripEmptyWrapperDivs(html) {
 > Second card not indenting, but it should per the logic!?
 > Would this work? if (p.width > div.width) then p.style.textIndent = XXpx FIX?
 * 'X' not appearing when text is in field like it should
+
+# 1/3/26
+
+* Am I missing listener on search in function? See comments

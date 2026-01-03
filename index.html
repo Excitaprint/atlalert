@@ -292,7 +292,7 @@
     </div>  -->
     <script>
 
-        document.addEventListener('DOMContentLoaded', (event) => {
+        document.dataaddEventListener('DOMContentLoaded', (event) => {
 
         const container = document.createElement('div');
         container.classList.add('grid-container');
@@ -360,6 +360,7 @@
                 searchWrapper.classList.add('search-wrapper');
                 drawer.appendChild(searchWrapper);
                 
+                // Need listener on it! Where's that? In next ppg?
                 let search = document.createElement('input');
                 search.type = 'search';
                 search.placeholder = 'Search...';

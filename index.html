@@ -276,6 +276,7 @@
         .search-x  {
             position: relative;
             display: flex;
+            visibility: hidden;
             width: 12px;
             padding-right: 8px;
             /* fill: #4429be; */
@@ -292,7 +293,7 @@
     </div>  -->
     <script>
 
-        document.dataaddEventListener('DOMContentLoaded', (event) => {
+        document.addEventListener('DOMContentLoaded', (event) => {
 
         const container = document.createElement('div');
         container.classList.add('grid-container');
@@ -366,17 +367,16 @@
                 search.placeholder = 'Search...';
                 search.classList.add('search-input');
                 searchWrapper.appendChild(search);
+                
 
                 let searchX = document.createElement('img');
                 searchX.src = '/img/search-x-icon.svg';
                 searchX.classList.add('search-x');
                 searchWrapper.appendChild(searchX);
 
-                //    if (!search.InputEvent.data) {
-                //     searchX.style.visibility = 'hidden';
-                //     } else {
-                //     searchX.style.visiblity = 'visible';
-                //     }
+                search.addEventListener('input', () => {
+                   searchX.style.visibility = 'visible';
+                });
                
                 // Search logic
                 const searchInput = document.querySelector('.search-input');

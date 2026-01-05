@@ -324,3 +324,9 @@ function stripEmptyWrapperDivs(html) {
 * Am I missing listener on search in function? See comments
 > Try that & this instead of (!search.value):
 > https://developer.mozilla.org/en-US/docs/Web/API/InputEvent
+
+# 1/4/26
+
+* Search working mostly, X must render 'hidden' first
+* Search still disapears once the function runs
+> It needs to repeat after function runs (?)

@@ -342,8 +342,11 @@
 - Fix 'click one card, click another before closing = reversed gradient
   > Do this with CSS classes? See around line 424
   > Change CSS to .post.gradient 'toggle'?
+  > See line 430 for previous attempt at bug
 - FEATURE/MARKETING
   > Time date stamp, very small to increase urgency
   > Increase size of condensed cards to accomodate this.
 - `<canvas>` for underline, make it perfect like AI vector
   > Squiggly? Jagged? Dashes at 60deg angle? Chevrons as dashes?
+- Is searchX event listener able to "see" searchInput?
+  > It should, other function works? Weird

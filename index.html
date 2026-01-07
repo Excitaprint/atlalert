@@ -381,14 +381,16 @@
                    // What variable is this? var.value? 
                 });
 
-                // Clear search on X click
-                searchX.addEventListener('click', () => {
-                    search.value = '';           
-                });
+
                
                 // Search logic
                 const searchInput = document.querySelector('.search-input');
                 const posts = document.querySelectorAll('.post');
+
+                // Clear search on X click
+                searchX.addEventListener('click', () => {
+                    searchInput.value = '';           
+                });
 
                 searchInput.addEventListener('input', (event) => {
                 const query = event.target.value.toLowerCase().trim();
@@ -421,6 +423,7 @@
                     gradient.classList.add('gradient');
                     post.appendChild(gradient);
                     post.addEventListener('click', function () {
+
                         // gradient.style. Fix gradient click here?
                         this.style.height = this.style.height === 'auto' ? '120px' : 'auto';
                         expand.forEach(post => { if (post !== this) post.style.height = '120px' }); 
@@ -429,8 +432,8 @@
                         // This work? How to set all to 'block' except clicked one, at all times?
                         // if (post !== 'clicked') {
                         //     gradient.style.display = 'block';
-                        // } else if (post === 'clicked') {
-                        //     gradient.style.display = 'none';
+                        // } else if (post == 'clicked') {
+                        //     gradient.style.visibility = 'hidden';
                         // };
                 });
                         

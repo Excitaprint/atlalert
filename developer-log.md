@@ -334,3 +334,8 @@
 - Search working mostly, X must render 'hidden' first
 - Search still disapears once the function runs
   > It needs to repeat after function runs (?)
+
+## 1/7/26
+
+- X is clearing field, but not repopulating DOM w/ posts
+  > Solution to move logic to main loop? Not in loop now!?

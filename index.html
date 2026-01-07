@@ -374,8 +374,14 @@
                 searchX.classList.add('search-x');
                 searchWrapper.appendChild(searchX);
 
+                // Keep X alive after click
                 search.addEventListener('input', () => {
                    searchX.style.visibility = 'visible';
+                });
+
+                // Clear search on X click
+                searchX.addEventListener('click', (event) => {
+                    event.search.value = '';           
                 });
                
                 // Search logic

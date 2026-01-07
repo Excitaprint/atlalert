@@ -341,6 +341,7 @@
   > Solution to move logic to main loop? Not in loop now!?
 - Fix 'click one card, click another before closing = reversed gradient
   > Do this with CSS classes? See around line 424
+  > Change CSS to .post.gradient 'toggle'?
 - FEATURE/MARKETING
   > Time date stamp, very small to increase urgency
   > Increase size of condensed cards to accomodate this.

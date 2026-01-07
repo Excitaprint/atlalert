@@ -350,3 +350,4 @@
   > Squiggly? Jagged? Dashes at 60deg angle? Chevrons as dashes?
 - Is searchX event listener able to "see" searchInput?
   > It should, other function works? Weird
+  > Could it be bubbling issue? 

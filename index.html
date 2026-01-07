@@ -421,6 +421,7 @@
                     gradient.classList.add('gradient');
                     post.appendChild(gradient);
                     post.addEventListener('click', function () {
+                        // gradient.style. Fix gradient click here?
                         this.style.height = this.style.height === 'auto' ? '120px' : 'auto';
                         expand.forEach(post => { if (post !== this) post.style.height = '120px' }); 
                         gradient.style.display = gradient.style.display === 'none' ? 'block' : 'none';

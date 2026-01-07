@@ -297,11 +297,3 @@ function stripEmptyWrapperDivs(html) {
 * Search X architecture: wrapper div gets border, etc. & looks like search box
 > Strip away styling from input field, place in wrapper with sibiling, the icon div
 > Use flex-grow: 1 to add column for both children (input & X)
-
-# 12
-
-* Fixed iOS underlining addresses
-> Did this with 'format-detection' meta tag
-> Can I remove this on scoped links, like in p tag?
-* Fix search, logo & script for 5 years of objects & updates
-> Then send prototype to people on list

@@ -341,3 +341,8 @@
   > Solution to move logic to main loop? Not in loop now!?
 - Fix 'click one card, click another before closing = reversed gradient
   > Do this with CSS classes
+- FEATURE/MARKETING
+  > Time date stamp, very small to increase urgency
+  > Increase size of condensed cards to accomodate this.
+- `<canvas>` for underline, make it perfect like AI vector
+  > Squiggly? Jagged? Dashes at 60deg angle?

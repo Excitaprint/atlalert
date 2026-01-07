@@ -345,4 +345,4 @@
   > Time date stamp, very small to increase urgency
   > Increase size of condensed cards to accomodate this.
 - `<canvas>` for underline, make it perfect like AI vector
-  > Squiggly? Jagged? Dashes at 60deg angle?
+  > Squiggly? Jagged? Dashes at 60deg angle? Chevrons as dashes?

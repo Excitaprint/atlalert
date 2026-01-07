@@ -339,3 +339,5 @@
 
 - X is clearing field, but not repopulating DOM w/ posts
   > Solution to move logic to main loop? Not in loop now!?
+- Fix 'click one card, click another before closing = reversed gradient
+  > Do this with CSS classes

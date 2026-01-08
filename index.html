@@ -372,10 +372,10 @@
 
                 // Keep X alive after click & if no text, don't display X(?)
                 search.addEventListener('input', () => {
-                    if (!search.value) {
-                        searchX.style.visibility = 'hidden';
-                    } else {
+                    if (search.value) {
                         searchX.style.visibility = 'visible';
+                    } else {
+                        searchX.style.visibility = 'hidden';
                     }
                 });
                

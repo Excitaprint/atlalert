@@ -361,27 +361,25 @@
                 searchWrapper.classList.add('search-wrapper');
                 drawer.appendChild(searchWrapper);
                 
-                // Need listener on it! Where's that? In next ppg?
                 let search = document.createElement('input');
                 search.type = 'search';
                 search.placeholder = 'Search...';
                 search.classList.add('search-input');
                 searchWrapper.appendChild(search);
-                
 
                 let searchX = document.createElement('img');
                 searchX.src = '/img/search-x-icon.svg';
                 searchX.classList.add('search-x');
                 searchWrapper.appendChild(searchX);
 
-                // Keep X alive after click
+                // Keep X alive after click & if no text, don't display X(?)
                 search.addEventListener('input', () => {
-                   searchX.style.visibility = 'visible';
-                   // If no text, don't display X
-                   // What variable is this? var.value? 
+                    if (search.textContent != '') {
+                        searchX.style.visibility = 'hidden';
+                    } else {
+                        searchX.style.visibility = 'visible';
+                    }
                 });
-
-
                
                 // Search logic
                 const searchInput = document.querySelector('.search-input');
@@ -389,7 +387,8 @@
 
                 // Clear search on X click
                 searchX.addEventListener('click', () => {
-                    searchInput.value = '';           
+                    searchInput.value = '';
+                    style.visiblity = 'hidden';           
                 });
 
                 searchInput.addEventListener('input', (event) => {

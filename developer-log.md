@@ -351,3 +351,8 @@
 - Is searchX event listener able to "see" searchInput?
   > It should, other function works? Weird
   > Could it be bubbling issue? 
+
+# 1/8/26
+
+- X clears text, but still not refreshing posts
+- X should dissapear if field empty, but isn't

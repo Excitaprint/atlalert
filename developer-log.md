@@ -357,3 +357,5 @@
 - X clears text, but still not refreshing posts
   > Posts refresh when field deleted with keys, though?
 - X should dissapear if field empty, but isn't
+- Close drawer on X click? 
+> Add search.focus() on X click? Returns cursor to input?

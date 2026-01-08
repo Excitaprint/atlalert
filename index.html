@@ -354,7 +354,7 @@
                     }
                 });
 
-                // Wrapper for input & X icon
+                // Wrapper for searh bar
                 let searchWrapper = document.createElement('div');
                 searchWrapper.classList.add('search-wrapper');
                 drawer.appendChild(searchWrapper);
@@ -386,7 +386,7 @@
                 // Clear search on X click
                 searchX.addEventListener('click', () => {
                     searchInput.value = '';
-                    style.visiblity = 'hidden';           
+                    style.visiblity = 'hidden';         
                 });
 
                 searchInput.addEventListener('input', (event) => {

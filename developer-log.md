@@ -352,10 +352,17 @@
   > It should, other function works? Weird
   > Could it be bubbling issue? 
 
-# 1/8/26
+## 1/8/26
 
 - X clears text, but still not refreshing posts
   > Posts refresh when field deleted with keys, though?
 - X should dissapear if field empty, but isn't
 - Close drawer on X click? 
-> Add search.focus() on X click? Returns cursor to input?
+  > Add search.focus() on X click? Returns cursor to input?
+
+## 1/9/26
+
+- Call loop here, repopulates .posts to feed after click 'X'
+  > Wrap loop function, assign variable and,
+  > Call it in the searchX event listener curly braces
+  > Define function before searchX listener (order matters!)

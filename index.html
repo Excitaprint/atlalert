@@ -383,15 +383,18 @@
                 const searchInput = document.querySelector('.search-input');
                 const posts = document.querySelectorAll('.post');
 
-                // Clear search on X click
+                // Clear search on X click -- rearrange order, after .post loop
                 searchX.addEventListener('click', () => {
+                    // Call loop here, to return missing 
+                    // wrap loop function, this will fix this bug
                     searchInput.value = '';
                     style.visiblity = 'hidden';         
                 });
 
                 searchInput.addEventListener('input', (event) => {
                 const query = event.target.value.toLowerCase().trim();
-
+                
+                // Make this it's own function for searchX event listener
                 posts.forEach(post => {
                     const text = post.textContent.toLowerCase();
 

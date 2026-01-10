@@ -397,9 +397,8 @@
                 // Clear search on X click -- rearrange order, after .post loop
                 searchX.addEventListener('click', () => {
                     searchInput.value = '';
-                    searchX.style.visibility = 'hidden';
+                    searchX.style.visibility = 'hidden'
                     
-                    // Loop here to re-display posts?
                     posts.forEach(post => {
                     post.style.display = 'grid';
                     });

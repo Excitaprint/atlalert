@@ -356,7 +356,7 @@
 
 - X clears text, but still not refreshing posts
   > Posts refresh when field deleted with keys, though?
-- X should dissapear if field empty, but isn't
+- X should dissappear if field empty, but isn't
 - Close drawer on X click? 
   > Add search.focus() on X click? Returns cursor to input?
 
@@ -371,3 +371,6 @@
 
 - Can't get loop to work?
   > Does it need to be
+- Didn't work because typos in 
+> searchX loop click
+> 

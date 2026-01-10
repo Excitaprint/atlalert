@@ -27,12 +27,12 @@
 
         a {
             color: inherit;
-            text-decoration: none !important;
+            text-decoration: none;
         }
 
         a:hover {
             color: inherit;
-            text-decoration: none !important;
+            text-decoration: none;
         }
 
         ::-webkit-scrollbar {
@@ -165,7 +165,6 @@
             /* filter: blur(0.875px); */
             /* background-blend-mode: darker; */
             pointer-events: none;
-            /* z-index: 10; */
         }
 
         .post:active {
@@ -212,33 +211,22 @@
             transform: translateY(0);
         }
 
-        /* .search-wrapper {
-            position: fixed;
-            display: grid;
-            font-family: "JetBrains Mono", monospace;
-            font-optical-sizing: auto;
-            font-size: 13.5px;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 50%;
-            background: inherit;
-            border-radius: 12px;
-            border: 1.991px solid #4429be;
-            padding: 4px;
-            z-index: 1002;
-            box-shadow: inset -2px 2px 8px rgba(0, 0, 0, 0.05);    
-            text-indent: 4px;  
-        } */
+        input {
+            appearance: none;
+            -webkit-appearance: none;
+            outline: 0 !important;
+            box-shadow: none !important;
+            border: 0 !important;
+            background: transparent;
+            -webkit-tap-highlight-color: transparent; /* Fixes mobile tap boxes */
+            background: none;
+        }
 
-        .search-input {
-            position: fixed;
-            /* position: absolute; */
-            /* top: 0;
-            left: 0; */
+        .search-wrapper {
+            position: absolute;
+            display: flex;
             font-family: "JetBrains Mono", monospace;
             font-optical-sizing: auto;
-            display: grid;
             font-size: 13.5px;
             top: 50%;
             left: 50%;
@@ -247,26 +235,52 @@
             background: inherit;
             border-radius: 12px;
             border: 1.991px solid #4429be;
-            padding: 4px;
             z-index: 1001;
             box-shadow: inset -2px 2px 8px rgba(0, 0, 0, 0.05);    
-            text-indent: 4px;        
+            text-indent: 4px;  
+        }
+        
+        .search-wrapper:focus,
+        .search-wrapper:focus-within,
+        .search-wrapper:active {
+            border: 1.991px solid #8369f7 !important;
+        }       
+
+        .search-input {
+            position: relative;
+            display: flex;
+            font-family: "JetBrains Mono", monospace;
+            font-optical-sizing: auto;
+            font-size: 13.5px;
+            width: 100%;
+            height: 100%;
+            padding: 4px;
+            z-index: 1001; 
+            text-indent: 4px;       
+        }
+
+        .search-input::-webkit-search-cancel-button,
+        .search-input::-webkit-search-results-button,
+        .search-input::-webkit-search-results-decoration {
+            display: none;
+            -webkit-appearance: none;
         }
 
         .search-input:focus,
         .search-input:active {
             outline: none;
-            /* border: 0.875px solid #8369f7 !important; */
-            border: 1.991px solid #8369f7 !important;
-        }        
-
-        /* This wil only show on Webkit & Chrome, need custom solution for compatibility 
-        .search-input::-webkit-search-cancel-button {
-            -webkit-appearance: relative;
-            background-color: #4429be;
-            width: 10px;
-            height: 10px;
-        } */
+            border: none;
+            box-shadow: none;
+        }
+        
+        .search-x  {
+            position: relative;
+            display: flex;
+            visibility: hidden;
+            width: 12px;
+            padding-right: 8px;
+            /* fill: #4429be; */
+        }
 
     </style>
 </head>
@@ -321,10 +335,10 @@
                     let p = card.querySelector('p');
                     if  (p.scrollHeight <= p.offsetHeight)  {
                         p.style.textIndent = '0px';
-                        };
+                        }
+                    // if (p.width > div.width) then p.style.textIndent = XXpx FIX?
                     container.appendChild(card);
                     console.log(bodyText);
-                    // return card;
                 });
 
                 // Drawer menu & child elements
@@ -340,9 +354,7 @@
                     }
                 });
 
-                // Add wrapper for search-input & include 'X' icon
-                // .search-wrapper
-                // if text in input, show X & clear text on click
+                // Wrapper for searh bar
                 let searchWrapper = document.createElement('div');
                 searchWrapper.classList.add('search-wrapper');
                 drawer.appendChild(searchWrapper);
@@ -352,13 +364,40 @@
                 search.placeholder = 'Search...';
                 search.classList.add('search-input');
                 searchWrapper.appendChild(search);
-               
+
+                let searchX = document.createElement('img');
+                searchX.src = '/img/search-x-icon.svg';
+                searchX.classList.add('search-x');
+                searchWrapper.appendChild(searchX);
+
                 // Search logic
                 const searchInput = document.querySelector('.search-input');
                 const posts = document.querySelectorAll('.post');
 
+                // Keep X alive after click & if no text, don't display X(?)
+                search.addEventListener('input', () => {
+                    if (search.value) {
+                        searchX.style.visibility = 'visible';
+                    } else {
+                        searchX.style.visibility = 'hidden';
+                    }
+                    });
+
+                // Clear search on X click -- rearrange order, after .post loop
+                searchX.addEventListener('click', () => {
+                    searchInput.value = '';
+                    searchX.style.visibility = 'hidden';
+                    
+                    // Loop here to re-display posts?
+                    posts.forEach(post => {
+                    post.style.display = 'grid';
+                    });
+                });
+
                 searchInput.addEventListener('input', (event) => {
                 const query = event.target.value.toLowerCase().trim();
+                
+                // Make this it's own function for searchX event listener
                 posts.forEach(post => {
                     const text = post.textContent.toLowerCase();
 
@@ -367,6 +406,7 @@
                     } else { 
                         post.style.display = 'none';
                     }
+
                 });
                 });
                 
@@ -386,6 +426,8 @@
                     gradient.classList.add('gradient');
                     post.appendChild(gradient);
                     post.addEventListener('click', function () {
+
+                        // gradient.style. Fix gradient click here?
                         this.style.height = this.style.height === 'auto' ? '120px' : 'auto';
                         expand.forEach(post => { if (post !== this) post.style.height = '120px' }); 
                         gradient.style.display = gradient.style.display === 'none' ? 'block' : 'none';
@@ -393,13 +435,13 @@
                         // This work? How to set all to 'block' except clicked one, at all times?
                         // if (post !== 'clicked') {
                         //     gradient.style.display = 'block';
-                        // } else if (post === 'clicked') {
-                        //     gradient.style.display = 'none';
+                        // } else if (post == 'clicked') {
+                        //     gradient.style.visibility = 'hidden';
                         // };
                 });
-                        
-                        console.log('clicked' + this);
-                    });
+
+                    console.log('clicked' + this);
+                });
 
                 // BG change on mouseup / touchend
                 const clickColorDown = document.querySelectorAll('.post');

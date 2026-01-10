@@ -385,7 +385,6 @@
                 const searchInput = document.querySelector('.search-input');
                 const posts = document.querySelectorAll('.post');
 
-                // Keep X alive after click & if no text, don't display X(?)
                 search.addEventListener('input', () => {
                     if (search.value) {
                         searchX.style.visibility = 'visible';
@@ -394,11 +393,11 @@
                     }
                     });
 
-                // Clear search on X click -- rearrange order, after .post loop
+                // Clear search-input, repopulate posts on X click
                 searchX.addEventListener('click', () => {
                     searchInput.value = '';
                     searchX.style.visibility = 'hidden'
-                    
+
                     posts.forEach(post => {
                     post.style.display = 'grid';
                     });

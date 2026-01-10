@@ -348,7 +348,9 @@
               
                 drawer.addEventListener('click', (event) => {
                     // If search-input clicked, do not toggle drawer
-                    if (event.target === search) return;
+                    if (event.target === search || 
+                        event.target === searchX
+                    ) return;
                     else {
                     drawer.classList.toggle('open')
                     }

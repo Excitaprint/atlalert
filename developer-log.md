@@ -374,12 +374,6 @@
 
 ## 1/10/26
 
-- Can't get loop to work?
-  > Does it need to be
-<<<<<<< HEAD
->>>>>>> develop
-=======
-- Didn't work because typos in 
+- Loop idn't work because typos in 
 > searchX loop click
-> 
->>>>>>> develop
+> 'visbility' instead of 'visibility' in X eventListener

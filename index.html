@@ -370,6 +370,10 @@
                 searchX.classList.add('search-x');
                 searchWrapper.appendChild(searchX);
 
+                // Search logic
+                const searchInput = document.querySelector('.search-input');
+                const posts = document.querySelectorAll('.post');
+
                 // Keep X alive after click & if no text, don't display X(?)
                 search.addEventListener('input', () => {
                     if (search.value) {
@@ -377,18 +381,17 @@
                     } else {
                         searchX.style.visibility = 'hidden';
                     }
-                });
-               
-                // Search logic
-                const searchInput = document.querySelector('.search-input');
-                const posts = document.querySelectorAll('.post');
+                    });
 
                 // Clear search on X click -- rearrange order, after .post loop
                 searchX.addEventListener('click', () => {
-                    // Call loop here, to return missing 
-                    // wrap loop function, this will fix this bug
                     searchInput.value = '';
-                    style.visiblity = 'hidden';         
+                    searchX.style.visibility = 'hidden';
+                    
+                    // Loop here to re-display posts?
+                    posts.forEach(post => {
+                    post.style.display = 'grid';
+                    });
                 });
 
                 searchInput.addEventListener('input', (event) => {

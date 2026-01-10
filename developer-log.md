@@ -366,3 +366,8 @@
   > Wrap loop function, assign variable and,
   > Call it in the searchX event listener curly braces
   > Define function before searchX listener (order matters!)
+
+## 1/10/26
+
+- Can't get loop to work?
+  > Does it need to be
